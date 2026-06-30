@@ -69,6 +69,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnLogin" min="-2" pref="67" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+			  <Component id="btnStart" min="-2" pref="67" max="-2" attributes="0"/>
+                          <EmptySpace max="34467" attributes="0"/>
                           <Component id="btnCancel" min="-2" pref="67" max="-2" attributes="0"/>
                       </Group>
                       <Component id="lblRegisterNewPlayer" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -100,6 +102,7 @@
                   <EmptySpace pref="45" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnLogin" alignment="0" min="-2" max="-2" attributes="0"/>
+		      <Component id="btnStart" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="btnCancel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -171,6 +174,16 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoginActionPerformed"/>
           </Events>
         </Component>
+	<Component class="javax.swing.JButton" name="btnStart">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Start"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoginActionPerformed"/>
+          </Events>
+        </Component>
+
         <Component class="javax.swing.JTextField" name="txtNick">
         </Component>
       </SubComponents>

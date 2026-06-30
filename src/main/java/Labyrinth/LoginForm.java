@@ -40,6 +40,7 @@ public class LoginForm extends javax.swing.JFrame {
         lblRegisterNewPlayer = new javax.swing.JLabel();
         btnCancel = new javax.swing.JButton();
         btnLogin = new javax.swing.JButton();
+        btnStart = new javax.swing.JButton();
         txtNick = new javax.swing.JTextField();
         lblLoginImage = new javax.swing.JLabel();
 
@@ -99,6 +100,14 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
 
+        btnStart.setText("Start");
+        btnStart.setName("");
+        btnStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStartActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlLoginLayout = new javax.swing.GroupLayout(pnlLogin);
         pnlLogin.setLayout(pnlLoginLayout);
         pnlLoginLayout.setHorizontalGroup(
@@ -116,6 +125,8 @@ public class LoginForm extends javax.swing.JFrame {
                             .addComponent(txtNick)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlLoginLayout.createSequentialGroup()
                         .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnStart, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblRegisterNewPlayer))
@@ -139,6 +150,7 @@ public class LoginForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLogin)
+                    .addComponent(btnStart)
                     .addComponent(btnCancel))
                 .addGap(18, 18, 18)
                 .addComponent(lblRegisterNewPlayer, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,9 +184,13 @@ public class LoginForm extends javax.swing.JFrame {
         new RegisterForm().setVisible(true);
     }//GEN-LAST:event_lblRegisterNewPlayerMouseClicked
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
         loginUser();
-    }//GEN-LAST:event_btnLoginActionPerformed
+    }
+
+    private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {
+        startGame();
+    }
 
     private void lblRegisterNewPlayerMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegisterNewPlayerMouseExited
         // change cursor for default and color when mouse cursor leaves lblRegisterNewPlayer
@@ -208,6 +224,7 @@ public class LoginForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnStart;
     private javax.swing.JLabel lblLoginImage;
     private javax.swing.JLabel lblNickName;
     private javax.swing.JLabel lblPassword;
@@ -340,5 +357,9 @@ public class LoginForm extends javax.swing.JFrame {
                  */
             }
         }
+    }
+
+    private void startGame() {
+        new GameForm(1, "NoName", "1");
     }
 }
